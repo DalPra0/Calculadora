@@ -1,3 +1,7 @@
+import tkinter as tk
+from tkinter import ttk
+import math
+
 def criar_matriz(rows, cols):
     matriz = []
     for _ in range(rows):

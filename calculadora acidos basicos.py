@@ -44,48 +44,39 @@ def fill_acid_entry(event):
     acid_entry.delete(0, tk.END)
     acid_entry.insert(0, selected_acid)
 
-# Create the main window
 window = tk.Tk()
 window.title("pH Calculator")
 
-# Create and place the acid label and entry
 acid_label = tk.Label(window, text="Ácido:")
 acid_label.pack()
 acid_entry = tk.Entry(window)
 acid_entry.pack()
 
-# Create and place the concentration label and entry with placeholder text and explanation
 concentration_label = tk.Label(window, text="Concentração (em mol/L, use notação científica '10^x' como '1.0e-3'):")
 concentration_label.pack()
 concentration_entry = ttk.Entry(window, width=30)
 concentration_entry.insert(0, "Digite a concentração")
 concentration_entry.pack()
 
-# Function to handle focus in event
 def on_entry_click(event):
     if concentration_entry.get() == "Digite a concentração":
         concentration_entry.delete(0, tk.END)
         concentration_entry.config(foreground='black')
 
-# Function to handle focus out event
 def on_focus_out(event):
     if not concentration_entry.get():
         concentration_entry.insert(0, "Digite a concentração")
         concentration_entry.config(foreground='grey')
 
-# Bind events to entry widget
 concentration_entry.bind('<FocusIn>', on_entry_click)
 concentration_entry.bind('<FocusOut>', on_focus_out)
 
-# Create and place the calculate button
 calculate_button = tk.Button(window, text="Calcular pH", command=calcular_pH_button)
 calculate_button.pack()
 
-# Create and place the result label
 result_label = tk.Label(window, text="")
 result_label.pack()
 
-# Create and place the acid table
 table_label = tk.Label(window, text="Ácidos disponíveis:")
 table_label.pack()
 
@@ -95,8 +86,6 @@ acid_listbox.pack()
 for acid in tabela_acidos:
     acid_listbox.insert(tk.END, acid)
 
-# Bind double click event to fill acid entry
 acid_listbox.bind("<Double-Button-1>", fill_acid_entry)
 
-# Start the GUI event loop
 window.mainloop()
