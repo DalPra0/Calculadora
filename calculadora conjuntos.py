@@ -1,11 +1,8 @@
 def main():
-    # Solicita ao usuário a quantidade de conjuntos
     num_sets = int(input("Quantidade de conjuntos: "))
 
-    # Inicializa uma lista vazia para armazenar os conjuntos
     sets = []
 
-    # Pede ao usuário para inserir os conjuntos
     for i in range(num_sets):
         elements = input(f"Inserir elementos para o conjunto {i + 1} separados por vírgulas: ").split(',')
         sets.append(set(map(int, elements)))
