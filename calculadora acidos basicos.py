@@ -35,7 +35,12 @@ def calcular_pH_button():
     if acid in tabela_acidos:
         Ka = tabela_acidos[acid]["Ka"]
         pH = calcular_pH(concentration, Ka)
-        result_label.config(text="O pH do ácido {} é: {:.2f}".format(acid, pH))
+        if pH > 7:
+            result_label.config(text="Ele é um basico e o pH {} é: {:.2f}".format(acid, pH))
+        elif pH == 7:
+            result_label.config(text="Ele é um acido neutro e o pH {} é: {:.2f}".format(acid, pH))
+        else:
+            result_label.config(text="Ele é um acido e o pH {} é: {:.2f}".format(acid, pH))
     else:
         result_label.config(text="Ácido não encontrado na tabela.")
 
