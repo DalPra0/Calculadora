@@ -9,32 +9,32 @@ def calcular_pH(concentracao_acido, Ka):
     return pH
 
 tabela_acidos = {
-    "H2SO3": {"Ka": 1.0e-2},  # Ácido sulfuroso
-    "H2SO4": {"Ka": 1.0e3},  # Ácido sulfúrico
-    "HClO4": {"Ka": 3.2e9},  # Ácido perclórico
-    "HCl": {"Ka": 1.3e6},  # Ácido clorídrico
-    "HNO3": {"Ka": 2.4e1},  # Ácido nítrico
-    "H3PO4": {"Ka": 7.1e-3},  # Ácido fosfórico
-    "HBr": {"Ka": 1.0e9},  # Ácido bromídrico
-    "HI": {"Ka": 3.2e9},  # Ácido iodídrico
-    "H2C4H4O6": {"Ka": 5.4e-2},  # Ácido tartárico
-    "H2C9H14O4": {"Ka": 1.8e-5},  # Ácido azeláico
-    "H3BO3": {"Ka": 5.8e-10},  # Ácido bórico
-    "H2MoO4": {"Ka": 1.8e-13},  # Ácido molíbdico
-    "H2WO4": {"Ka": 1.8e-13},  # Ácido túngstico
-    "H2SeO4": {"Ka": 1.8e-13},  # Ácido selênico
-    "H2TeO3": {"Ka": 1.8e-13},  # Ácido telurioso
-    "H2CrO4": {"Ka": 1.8e-13},  # Ácido crômico
-    "H2Cr2O7": {"Ka": 1.8e-13},  # Ácido dicrômico
-    "H2B4O7": {"Ka": 1.8e-13},  # Ácido tetraborico
-    "H2SnO3": {"Ka": 1.8e-13},  # Ácido metástânico
-    "H2C2O2": {"Ka": 1.8e-13},  # Ácido hipooxálico
-    "H3[F3(CN)6]": {"Ka": 1.8e-13},  # Ácido ferricianídrico
-    "HCNO": {"Ka": 1.8e-13},  # Ácido ciânico
-    "H2SiO2": {"Ka": 1.8e-13},  # Ácido silicoso
-    "HSCN": {"Ka": 1.8e-13},  # Ácido tiociânico
-    "H2UO4": {"Ka": 1.8e-13},  # Ácido úrico
-    "H2U2O7": {"Ka": 1.8e-13}  # Ácido diurânico
+    "H2SO3": {"Ka": 1.6e-2},   # Ácido sulfuroso
+    "H2SO4": {"Ka": 1.0e3},    # Ácido sulfúrico
+    "HClO4": {"Ka": 2.0e9},    # Ácido perclórico
+    "HCl": {"Ka": 1.0e6},      # Ácido clorídrico
+    "HNO3": {"Ka": 2.4e1},     # Ácido nítrico
+    "H3PO4": {"Ka": 7.5e-3},   # Ácido fosfórico
+    "HBr": {"Ka": 1.0e9},      # Ácido bromídrico
+    "HI": {"Ka": 3.2e9},       # Ácido iodídrico
+    "H2C4H4O6": {"Ka": 1.0e-2},# Ácido tartárico
+    "H2C9H14O4": {"Ka": 1.8e-5},# Ácido azeláico
+    "H3BO3": {"Ka": 1.0e-9},   # Ácido bórico
+    "H2MoO4": {"Ka": 1.0e-13}, # Ácido molíbdico
+    "H2WO4": {"Ka": 1.0e-13},  # Ácido túngstico
+    "H2SeO4": {"Ka": 3.0e-2},  # Ácido selênico
+    "H2TeO3": {"Ka": 6.3e-2},  # Ácido telurioso
+    "H2CrO4": {"Ka": 1.8e-1},  # Ácido crômico
+    "H2Cr2O7": {"Ka": 2.8e-1}, # Ácido dicrômico
+    "H2B4O7": {"Ka": 5.8e-10}, # Ácido tetraborico
+    "H2SnO3": {"Ka": 2.0e-2},  # Ácido metástânico
+    "H2C2O2": {"Ka": 5.6e-2},  # Ácido hipooxálico
+    "H3[F3(CN)6]": {"Ka": 1.0e-3},  # Ácido ferricianídrico
+    "HCNO": {"Ka": 1.0e-4},    # Ácido ciânico
+    "H2SiO2": {"Ka": 1.0e-9},  # Ácido silicoso
+    "HSCN": {"Ka": 1.0e-4},    # Ácido tiociânico
+    "H2UO4": {"Ka": 1.0e-13},  # Ácido úrico
+    "H2U2O7": {"Ka": 1.0e-13}  # Ácido diurânico
 
 }
 
