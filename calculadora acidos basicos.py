@@ -9,17 +9,33 @@ def calcular_pH(concentracao_acido, Ka):
     return pH
 
 tabela_acidos = {
-    "CH3COOH": {"Ka": 1.8e-5},
-    "HCN": {"Ka": 4.9e-10},
-    "H2S": {"Ka": 9.1e-8},
-    "HCOOH": {"Ka": 1.8e-4},
-    "HF": {"Ka": 6.8e-4},
-    "C6H5COOH": {"Ka": 6.3e-5},
-    "C6H8O7": {"Ka": 7.5e-4},
-    "C3H6O3": {"Ka": 1.4e-4},
-    "C4H6O6": {"Ka": 1.0e-4},
-    "C2H4O2": {"Ka": 1.8e-5},
-    "H2CO3": {"Ka": 4.3e-7}
+    "H2SO3": {"Ka": 1.0e-2},  # Ácido sulfuroso
+    "H2SO4": {"Ka": 1.0e3},  # Ácido sulfúrico
+    "HClO4": {"Ka": 3.2e9},  # Ácido perclórico
+    "HCl": {"Ka": 1.3e6},  # Ácido clorídrico
+    "HNO3": {"Ka": 2.4e1},  # Ácido nítrico
+    "H3PO4": {"Ka": 7.1e-3},  # Ácido fosfórico
+    "HBr": {"Ka": 1.0e9},  # Ácido bromídrico
+    "HI": {"Ka": 3.2e9},  # Ácido iodídrico
+    "H2C4H4O6": {"Ka": 5.4e-2},  # Ácido tartárico
+    "H2C9H14O4": {"Ka": 1.8e-5},  # Ácido azeláico
+    "H3BO3": {"Ka": 5.8e-10},  # Ácido bórico
+    "H2MoO4": {"Ka": 1.8e-13},  # Ácido molíbdico
+    "H2WO4": {"Ka": 1.8e-13},  # Ácido túngstico
+    "H2SeO4": {"Ka": 1.8e-13},  # Ácido selênico
+    "H2TeO3": {"Ka": 1.8e-13},  # Ácido telurioso
+    "H2CrO4": {"Ka": 1.8e-13},  # Ácido crômico
+    "H2Cr2O7": {"Ka": 1.8e-13},  # Ácido dicrômico
+    "H2B4O7": {"Ka": 1.8e-13},  # Ácido tetraborico
+    "H2SnO3": {"Ka": 1.8e-13},  # Ácido metástânico
+    "H2C2O2": {"Ka": 1.8e-13},  # Ácido hipooxálico
+    "H3[F3(CN)6]": {"Ka": 1.8e-13},  # Ácido ferricianídrico
+    "HCNO": {"Ka": 1.8e-13},  # Ácido ciânico
+    "H2SiO2": {"Ka": 1.8e-13},  # Ácido silicoso
+    "HSCN": {"Ka": 1.8e-13},  # Ácido tiociânico
+    "H2UO4": {"Ka": 1.8e-13},  # Ácido úrico
+    "H2U2O7": {"Ka": 1.8e-13}  # Ácido diurânico
+
 }
 
 def calcular_pH_button():
