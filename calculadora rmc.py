@@ -274,3 +274,4 @@ def calcular_transposta():
 
 if __name__ == "__main__":
     menu_principal()
+    
