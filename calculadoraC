@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+void menu() {
+    printf("\nEscolha uma operação:\n");
+    printf("1. Adição\n");
+    printf("2. Subtração\n");
+    printf("3. Multiplicação\n");
+    printf("4. Divisão\n");
+    printf("5. Sair\n");
+}
+
+int main() {
+    int opcao;
+    double num1, num2, resultado;
+
+    while(1) {
+        menu();
+        scanf("%d", &opcao);
+
+        if(opcao == 5) {
+            printf("Encerrando...\n");
+            break;
+        }
+
+        printf("Digite o primeiro número: ");
+        scanf("%lf", &num1);
+        printf("Digite o segundo número: ");
+        scanf("%lf", &num2);
+
+        switch(opcao) {
+            case 1:
+                resultado = num1 + num2;
+                printf("Resultado: %.2lf\n", resultado);
+                break;
+            case 2:
+                resultado = num1 - num2;
+                printf("Resultado: %.2lf\n", resultado);
+                break;
+            case 3:
+                resultado = num1 * num2;
+                printf("Resultado: %.2lf\n", resultado);
+                break;
+            case 4:
+                if(num2 != 0)
+                    resultado = num1 / num2;
+                else
+                    printf("Erro: Divisão por zero.\n");
+                printf("Resultado: %.2lf\n", resultado);
+                break;
+            default:
+                printf("Opção inválida.\n");
+        }
+    }
+
+    return 0;
+}
+

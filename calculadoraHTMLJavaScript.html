@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .calculadora {
+            width: 260px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .display {
+            width: 100%;
+            height: 60px;
+            font-size: 24px;
+            text-align: right;
+            padding: 10px;
+            box-sizing: border-box;
+            border: none;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .botoes {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+
+        button {
+            height: 60px;
+            font-size: 24px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button.operator {
+            background-color: #28a745;
+        }
+
+        button.clear {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+
+<div class="calculadora">
+    <input type="text" class="display" id="display" disabled value="0">
+    <div class="botoes">
+        <button onclick="limpar()">C</button>
+        <button onclick="adicionarOperacao('/')">/</button>
+        <button onclick="adicionarOperacao('*')">*</button>
+        <button onclick="adicionarOperacao('-')">-</button>
+
+        <button onclick="adicionarNumero('7')">7</button>
+        <button onclick="adicionarNumero('8')">8</button>
+        <button onclick="adicionarNumero('9')">9</button>
+        <button onclick="adicionarOperacao('+')">+</button>
+
+        <button onclick="adicionarNumero('4')">4</button>
+        <button onclick="adicionarNumero('5')">5</button>
+        <button onclick="adicionarNumero('6')">6</button>
+
+        <button onclick="adicionarNumero('1')">1</button>
+        <button onclick="adicionarNumero('2')">2</button>
+        <button onclick="adicionarNumero('3')">3</button>
+        <button rowspan="2" onclick="calcular()" style="grid-row: span 2;">=</button>
+
+        <button colspan="2" onclick="adicionarNumero('0')">0</button>
+        <button onclick="adicionarNumero('.')">.</button>
+    </div>
+</div>
+
+<script>
+    let display = document.getElementById('display');
+    let operacaoAtual = "";
+
+    function adicionarNumero(numero) {
+        if (display.value === "0") {
+            display.value = numero;
+        } else {
+            display.value += numero;
+        }
+    }
+
+    function adicionarOperacao(operador) {
+        operacaoAtual += display.value + operador;
+        display.value = "";
+    }
+
+    function calcular() {
+        operacaoAtual += display.value;
+        try {
+            display.value = eval(operacaoAtual);
+            operacaoAtual = "";
+        } catch (e) {
+            display.value = "Erro";
+        }
+    }
+
+    function limpar() {
+        display.value = "0";
+        operacaoAtual = "";
+    }
+</script>
+
+</body>
+</html>
+
